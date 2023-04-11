@@ -3,23 +3,27 @@ class Animal {
 	constructor(species){
 		this.species = species;
 	}
-	get getterForSpecies(){
+	get species(){
 		return this.species;
 	}
 	makeSound(){
-		console.log(`a sound the animal makes`);
+		console.log(`The ${this.species} makes sound `);
 	}
 }
 
 class Dog extends Animal {
-	super(species);
+	constructor(species){
+		super(species);
+	}
 	bark(){
 		console.log('woof');
 	}
 }
 
 class Cat extends Animal {
-super(species);
+constructor(species){
+		super(species);
+	}
 	purr(){
 		console.log('purr');
 	}
